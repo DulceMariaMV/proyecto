@@ -7,5 +7,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',inicio_view),
+    url(r'^perfil/$',perfil),
+   
+    url(r'^login/$',login_usuario), 
+    url(r'^registro/$',registro),
     
 )
