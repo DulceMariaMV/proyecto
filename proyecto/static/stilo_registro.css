@@ -1,7 +1,7 @@
 fieldset{
     background-size:cover;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     float: center;
     padding: 30px;
     border-radius: 70px 70px 70px 70px;
@@ -18,17 +18,26 @@ fieldset{
     font-size:20px;
     font-color: #fff;
     transition:6s;
+  
+    position: relative
+    left:50%;
+    top:50%;
+     margin: 100px 200px 200px 400px;
+     opacity: 0.8;
 }
 legend {
-    border-bottom: 4px;
     border-color: #fff;
+    border:69px;
     border-radius: 20px;
     background: #800000;
-    padding: 10px;
-    bottom: 10px;
+    padding: 0px;
+    bottom: 5px;
     font-size: 20px;
     font-color: #fff;
     text-align:left;
+    width: 300px;
+    height: 70px;
+    b
    }
 h1{
    
