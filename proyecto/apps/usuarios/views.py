@@ -1,5 +1,6 @@
 #encoding:utf-8
-from django.shortcuts import render,render_to_response
+from django.shortcuts import render, render_to_response
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout, authenticate
@@ -10,6 +11,7 @@ from .models import *
 
 def inicio_view(request):
 	return render_to_response("inicio.html",{},context_instance=RequestContext(request))
+
 
 def registro(request):
 	if request.method=="POST":
@@ -24,10 +26,10 @@ def registro(request):
 			perfil=perfil_usuario.objects.create(user=nuevo_usuario)
 			perfil.save()
 			#return HttpResponse("registrado")
-			return render_to_response("usuarios/perfil.html",{},context_instance=RequestContext(request))
-		else:
-			form_usuario=UserCreationForm()	
-		return render_to_response("registro.html",{'formulario':form_usuario},context_instance=RequestContext(request))	
+			return render_to_response("usuarios/perfil.html")
+	else:
+		form_usuario=UserCreationForm()	
+	return render_to_response("registro.html",{'formulario':form_usuario},context_instance=RequestContext(request))	
 
 def login_usuario(request):
 	if request.method=="POST":
@@ -39,11 +41,15 @@ def login_usuario(request):
 			if resultado:
 				login(request,resultado)
 				request.session["name"]=username
-				return HttpResponseRedirect("/usuarios/perfil/")
+				return render_to_response("usuarios/perfil.html")
 	form=AuthenticationForm()
-	return HttpResponse("entraste")
+	return render_to_response("usuarios/login.html",{"form":form},RequestContext(request))
+
+def perfil(request):
+	#return HttpResponse("registrado")
+	return render_to_response("usuario/perfil.html",{"nombre":request.session["name"]},RequestContext(request))	
+
+
 def logout_usuario(request):
 	logout(request)
-	return HttpResponseRedirect("inicio")
-def perfil(request):
-	return render_to_response("usuario/perfil.html",{"nombre":request.session["name"]},RequestContext(request))
+	return render_to_response("registro.html")

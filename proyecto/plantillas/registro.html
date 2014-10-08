@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		
+		<title>Proyecto </title>
+		<link type="text/css" rel="stylesheet" href="/static/stilos.css"/>
+		
+	</head>
+	<h1>Registro</h1>
+
+
+{% block contenido %}
+	<form action="" method="POST">
+		{{formulario.as_p}}
+		
+		
+					<input type="submit" name="enviar" value="enviar" method"post" ><br>
+					{% csrf_token %}
+	</form>
+
+{% endblock %}

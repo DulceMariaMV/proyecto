@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/stilos.css">
+	<title>proyecto</title>
+</head>
+<header>
+			<div id="header"><br/>
+				<h1>TriviaOnline.bo</h1></br></br></br></br></br>
+			</div>
+</header>
+<body>
+	<center><nav></br>
+		<menu ><b><a href="inicio.html"target="_blank">INICIO</a></b></menu>
+		<menu ><b><a href="registro"target="_self" method="get">REGISTRARSE</b></menu>
+		<menu ><b><a href="juegos_publicos.html"target="_blank" method>JUEGOS PUBLICOS.</b></menu>
+		{% if user.is_anonymous %}
+		<menu ><b><a href="login"target="_blank">LOGIN</a></b></menu>
+		{% endif %}
+		<menu ><b><a href="acerca_juego" target="_blank">ACERCA DE PAGINA</a></b></menu>
+		{% if not user.is_anonymous %}
+		<menu ><b><a href="logout">{{user}} LogOut</a></b></menu>
+		{% endif %}
+	</nav></center>
+	
+	
+	{%block container%}
+
+	{%endblock %}
+	<section >
+					
+					<center><img src="static/images/section.jpg"/></center>
+					
+				</section>
+		
+
+		<footer>
+
+            <small>
+				
+				<h1>UNETE A ESTA PELEA!!!!</h1>
+
+            </small>        
+
+        </footer>
+</body>
+</html>
+
+
+
+	
+	
+	
