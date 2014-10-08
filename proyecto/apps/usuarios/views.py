@@ -26,10 +26,10 @@ def registro(request):
 			perfil=perfil_usuario.objects.create(user=nuevo_usuario)
 			perfil.save()
 			#return HttpResponse("registrado")
-			return render_to_response("usuarios/perfil.html")
+			return HttpResponseRedirect("/blog/")
 	else:
 		form_usuario=UserCreationForm()	
-	return render_to_response("registro.html",{'formulario':form_usuario},context_instance=RequestContext(request))	
+	return render_to_response("usuarios/registro.html",{'formulario':form_usuario},context_instance=RequestContext(request))	
 
 def login_usuario(request):
 	if request.method=="POST":
@@ -41,15 +41,16 @@ def login_usuario(request):
 			if resultado:
 				login(request,resultado)
 				request.session["name"]=username
-				return render_to_response("usuarios/perfil.html")
+				#return render_to_response("usuarios/perfil.html")
+				return HttpResponseRedirect("/blog/perfil/")
 	form=AuthenticationForm()
 	return render_to_response("usuarios/login.html",{"form":form},RequestContext(request))
 
 def perfil(request):
 	#return HttpResponse("registrado")
-	return render_to_response("usuario/perfil.html",{"nombre":request.session["name"]},RequestContext(request))	
+	return render_to_response("usuarios/perfil.html",{"nombre":request.session["name"]},RequestContext(request))	
 
 
 def logout_usuario(request):
 	logout(request)
-	return HttpResponseRedirect("/plantillas/")
+	return HttpResponseRedirect("/blog/")

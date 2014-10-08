@@ -112,13 +112,7 @@ article{
 
 	
 }
-section {
-	background:none;url("images/section.jpg") 50% 50% no-repeat;
-	background-repeat: no-repeat;
-	background-size:cover; 
-	float:center;
 
-}
 img {
 	height: 80%;
 	width: 80%;
@@ -139,6 +133,7 @@ footer small h1{
 
 
 }
+
 
 
 

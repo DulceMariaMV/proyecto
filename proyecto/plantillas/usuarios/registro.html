@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+
+{%block container%}
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/stilo_registro.css">
+	<title>proyecto</title>
+</head>
+
+	
+	<cente><div id="formulario">
+		<fieldset>
+			<legend><center><h1>Registro</h1></center></legend>
+			<form  action="" method="POST"><br>
+			<dl>
+        		<dt><label>{{formulario.as_p}}<br></label></dt>
+        	</dl>
+
+				<input type="submit" name="enviar" value="enviar" method="post" ><br><br>
+					{% csrf_token %}
+			</form><br>
+
+		</fieldset></center>
+	</div>
+
+{%endblock%}
+
+	
+

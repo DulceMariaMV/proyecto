@@ -48,3 +48,49 @@ label{
     font-size: 25px;
     color:#fff;
 }
+#login fieldset{
+    background-size:cover;
+    width: 400px;
+    height: 200px;
+    float: center;
+    padding: 100px 100px 100px 100px;
+    border-radius: 100px 0px 100px 0px;
+    border-collapse: 30px;
+    vertical-align:top;
+    background:-moz-linear-gradient(#000000 0%, #0055FF 100%);
+    background:-ms-linear-gradient(#000040 0%, #0055FF 100%);
+    background:-o-linear-gradient(#000040 0%, #0055FF 100%);
+    background:-webkit-linear-gradient(#000040 0%,#0055FF 100%);
+    border:solid 9px #DEDEDE;
+    border-color:#EAEAAE;
+    margin:20px;
+    background: linear-gradient(#5C3317, #B5A642);
+    font-color: #000;
+    transition:6s;
+    position: relative
+    left:50%;
+    top:50%;
+   margin: 100px 200px 200px 400px;
+     opacity: 0.8;
+
+}
+#login fieldset legend{
+    font-size: 20px;
+    font-color:#000;
+    border-color: #fff;
+    text-align: center;
+    background:#EAEAAE; 
+    border-spacing: 30px;
+
+}
+#login fieldset label{
+    background:none;
+    font-size:25px;
+}
+#login fieldset legend h1{
+    color:#000;
+
+}
+button{
+    background:url("images/amarillo.png"); 
+}
