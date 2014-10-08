@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		
-		<title>Proyecto </title>
-		<link type="text/css" rel="stylesheet" href="/static/stilos.css"/>
-		
-	</head>
-	<h1>Registro</h1>
-
-
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/stilo_registro.css">
+	<title>proyecto</title>
+</head>
 {% block contenido %}
-	<form action="" method="POST">
-		{{formulario.as_p}}
-		
-		
-					<input type="submit" name="enviar" value="enviar" method"post" ><br>
-					{% csrf_token %}
-	</form>
-
 {% endblock %}
+	<div id="formulario">
+		<fieldset>
+			<legend><h1>Registro</h1></legend>
+			<form  action="" method="POST"><br>
+			<dl>
+        		<dt><label>{{formulario.as_p}}<br></label></dt>
+        	</dl>
+
+					<input type="button" name="enviar" value="enviar" method"post" ><br><br>
+					{% csrf_token %}
+			</form><br>
+
+		</fieldset>
+	</div>
+					
+	
+	
+
+
+	
+

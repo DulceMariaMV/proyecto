@@ -52,4 +52,4 @@ def perfil(request):
 
 def logout_usuario(request):
 	logout(request)
-	return render_to_response("registro.html")
+	return HttpResponseRedirect("/plantillas/")

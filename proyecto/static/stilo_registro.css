@@ -1,0 +1,41 @@
+fieldset{
+    background-size:cover;
+    width: 400px;
+    height: 400px;
+    float: center;
+    padding: 30px;
+    border-radius: 70px 70px 70px 70px;
+    border-collapse: 30px;
+    vertical-align:top;
+    background:-moz-linear-gradient(#000000 0%, #0055FF 100%);
+    background:-ms-linear-gradient(#000040 0%, #0055FF 100%);
+    background:-o-linear-gradient(#000040 0%, #0055FF 100%);
+    background:-webkit-linear-gradient(#000040 0%,#0055FF 100%);
+    border:solid 9px #DEDEDE;
+    border-color:#FFFAF0;
+    margin:10px;
+    background: linear-gradient(#A52A2A, #F4A460);
+    font-size:20px;
+    font-color: #fff;
+    transition:6s;
+}
+legend {
+    border-bottom: 4px;
+    border-color: #fff;
+    border-radius: 20px;
+    background: #800000;
+    padding: 10px;
+    bottom: 10px;
+    font-size: 20px;
+    font-color: #fff;
+    text-align:left;
+   }
+h1{
+   
+    color:#fff;
+}
+label{
+    background: red;
+    font-size: 25px;
+    color:#fff;
+}
